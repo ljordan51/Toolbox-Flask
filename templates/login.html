@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% if error %}
+  <html>
+      <head>
+          <title>
+              Error
+          </title>
+      </head>
+  <body>
+      <h1>Whoops!</h1>
+      <p>One of your input fields was blank. Please click the button below to return and try again.</p>
+      <form action='/'>
+          <input type='submit' value="Try again!">
+      </form>
+  </body>
+  </html>
+{% else %}
+  <html>
+      <head>
+          <title>
+              Profile
+          </title>
+      </head>
+  <body>
+      <h1>Your Profile:</h1>
+      <p>Name: {{ name }}</p>
+      <p>Age: {{ age }}</p>
+      <p>Favorite Ninja: Patrick Huston</p>
+  </body>
+  </html>
+{% endif %}
